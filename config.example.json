@@ -1,0 +1,43 @@
+{
+  "website_url": "${EFLEET_URL}",
+  "username": "${EFLEET_USERNAME}",
+  "password": "${EFLEET_PASSWORD}",
+  "excel_file": "data/VehicleDetails.xlsx",
+  "sheet_name": "DATA",
+  "search_column_name": "HireSlipNo",
+  "search_column_index_1_based": 2,
+  "start_excel_row": 2,
+  "headless": true,
+  "auto_start": false,
+  "image_auto_close_sec": 2.0,
+  "max_images": 20,
+  "save_after_each_query": true,
+  "wait_for_save_next_after_images": true,
+  "selectors": {
+    "login_username": "#UserName",
+    "login_password": "#Password",
+    "login_button": "#loginForm > form > div:nth-child(6) > div > input",
+    "dashboard_ready": "input[type='search']",
+    "search_box": "input[type='search']",
+    "eye_selectors": [
+      "#tblVehiclePlacement > tbody > tr > td:nth-child(3) > a.View > span",
+      "#tblVehiclePlacement a.View",
+      "a.View",
+      "//a[contains(@class, 'View')]"
+    ],
+    "step2_selectors": [
+      "#wizard_example-box li:nth-child(2) span",
+      "#wizard_example-box li span"
+    ],
+    "image_step_selectors": [
+      "#wizard_example-box li:nth-child(5) span",
+      "#wizard_example-box li:nth-child(4) span",
+      "#wizard_example-box li:last-child span"
+    ],
+    "image_link_selectors": [
+      "td.ImageFileClss a",
+      "a[href*='.jpg'], a[href*='.jpeg'], a[href*='.png'], a[href*='Download'], a[href*='Image']",
+      "//td[contains(@class, 'ImageFileClss')]//a"
+    ]
+  }
+}

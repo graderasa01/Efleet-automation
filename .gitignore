@@ -1,0 +1,11 @@
+.env
+config.json
+*.log
+__pycache__/
+.pytest_cache/
+static/current_image.png
+static/*.png
+reports/
+logs/
+*.xlsx
+!data/sample_vehicle_details.xlsx
